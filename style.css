@@ -16,23 +16,23 @@
 
 h1, h2, h3, h4, h5, h6,
 button, input, select, textarea {
-    font-family: 'Comfortaa', cursive, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 }
 ::-webkit-input-placeholder {
-    font-family: 'Comfortaa', cursive, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 }
 :-moz-placeholder {
-    font-family: 'Comfortaa', cursive, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 }
 ::-moz-placeholder {
-    font-family: 'Comfortaa', cursive, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 }
 :-ms-input-placeholder {
-    font-family: 'Comfortaa', cursive, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 body {
-    font-family: 'Comfortaa', cursive, sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-size: 4rem;
     background-repeat: no-repeat;
     min-height: 100vh;
