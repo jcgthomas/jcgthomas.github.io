@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
+</head>
+    <body>
+
+    <header>
+        <div id="headerTop">
+            <div id="logoContainer">
+            <a href="#intro"><img src="JT.png" alt="JT LOGO" id="logo"></a>
+        </div>
+        <span id="headerNav">
+            <a class="navLink" href="#portfolio">Portfolio</a>
+            <a class="navLink" href="#skills">Skills</a>
+            <a class="navLink" href="#contact">Contact</a>
+            <a class="navLink" href="#intro" onclick="cvHighlight()">CV</a>
+            <a class="navLink" href="#"></a>
+        </span>
+        </div>
+        <span id="headerBottom">
+            <a title="GitHub" class="fab fa-github-square mediaLink" href="#"></a>
+            <a title="LinkedIn" class="fab fa-linkedin mediaLink" href="#"></a>
+            <a title="Email" class="fas fa-envelope-square mediaLink" href="#"></a>
+        </span>
+    </header>
+
+    <main>
+        <div id="intro">
+            <div id="introJames">
+                <span class="introText" id="james">James Thomas</span><span class="introText">,<br>web developer.</span>
+                <br>
+                <a id="cv" class="cvLink" onclick="cvHighlight()" target="_blank" href="./James C G Thomas CV 012021.pdf">View my CV</a>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <h2>My work</h2>
+            <div id="portfolioWindow">
+                <div class="portfolioItem">1</div>
+                <div class="portfolioItem">2</div>
+                <div class="portfolioItem">3</div>
+                <div class="portfolioItem">4</div>
+                <div class="portfolioItem">5</div>
+                <div class="portfolioItem">6</div>
+            </div>
+        </div>
+
+        <div id="skills">
+            <h2>Skills</h2>
+            <ul id="skillList">
+                <li class="skill">Eating potatoes</li>
+                <li class="skill">Playing zelda</li>
+                <li class="skill">Making bad oat milk</li>
+                <li class="skill">Finding morrisons deals</li>
+                <li class="skill">Clapping with one hand</li>
+                <li class="skill">Sometimes drinking lots of water</li>
+            </ul>
+        </div>
+
+        <div id="contact">
+            <h2>Contact</h2>
+            <form id="surveyForm">
+                <ul>
+                    <li class="formGroup">
+                        <input class="formEntry" 
+                                type="text" 
+                                name="name" 
+                                id="contactName" 
+                                placeholder="Name" 
+                                required>
+                    </li>
+                    <li class="formGroup">
+                        <input class="formEntry" 
+                                type="email" 
+                                name="email" 
+                                id="contactEmail" 
+                                placeholder="Email" 
+                                required>
+                    </li>  
+                    <li class="formGroup">
+                        <input class="formEntry" 
+                                type="text" 
+                                name="subject" 
+                                id="contactSubject" 
+                                placeholder="Subject" 
+                                required>
+                    </li>
+                    <li id="contactBox" class="formGroup">
+                        <textarea class="formEntry"
+                                maxlength="4000"
+                                name="message"
+                                id="contactMessage"
+                                placeholder="Message"></textarea>
+                    </li>
+                    <li class="formGroup">
+                    <button type="submit" id="submit" class="submitButton">
+                        Send Message
+                    </button>
+                    </li>    
+                </ul>
+                
+            </form>
+        </div>
+        
+    </main>
+</body>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="script.js"></script>
+</html>
