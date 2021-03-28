@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(186, 224, 255, 0.6), white, rgba(186, 224, 255, 0.6));
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#round {
+    display: flex;
+}
+
+#start {
+    margin-top: 20px;
+    padding: 5px 20px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+    outline: none;
+}
+
+#start:active {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+
+#memoryGame {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gameBox {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.box {
+    height: 130px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;;
+    font-size: 150px;
+    margin: 10px;
+}
+
+.flash-green {
+    background-color: rgba(0, 161, 0, 0.1);
+}
+
+.flash-red {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.light {
+    background-color: yellow;
+}
+
+h1 {
+    text-align: center;
+}
