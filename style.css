@@ -135,7 +135,7 @@ main {
 }
 
 #introJames {
-    padding-top: 14rem;
+    padding-top: 30vh;
 
 }
 
@@ -148,38 +148,19 @@ main {
     font-size: 5rem;
 }
 
-.cvLink {
+#cv {
     width: 2rem;
     height: 2rem;
     color:rgba(255, 255, 255, 0.8);
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin: 0 auto;
     text-decoration: none;
     text-shadow: 2px 2px 2px rgba(0,0,0,1);
     transition: 0.3s;
-    padding: 1rem;
 }
 
-.cvHighlight {
-    animation: pulse 1s;
-    animation-iteration-count: 10;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-@keyframes pulse {
-    0% {
-        color: rgba(255, 255, 255, 0.8)
-    }
-    50% {
-        color: var(--col5)
-    }
-    100% {
-        color: rgba(255, 255, 255, 0.8)
-    }
-}
-
-.cvLink:hover {
-    color: white;
+#cv:hover {
+    color: var(--col5);
 }
 
 #portfolio {
@@ -197,34 +178,74 @@ h2 {
 }
 
 #portfolioWindow {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    grid-template-columns: repeat(3, 20vw);
-    grid-template-rows: 20vw 20vw;
     column-gap: 1rem;
     row-gap: 1rem;
-    text-align: center;
 }
 
 .portfolioItem {
-    background: var(--col2);
-    align-items: center;
-    justify-content: center;
-    line-height: 20vw;
-    color: var(--col5);
-    transition: 0.2s;
+    width: 30vmin;
+    height: 30vmin;
     opacity: 75%;
+    background: var(--col2);
+    color: white;
+    transition: 0.2s;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-shadow: 0 0 3px black;
+}
+
+
+.portfolioItem:hover {
+    transform: scale(1.05);
+    transform-origin: 50% 50%;
+    opacity: 100%;
+    background: #94749e;
+    color: white;
+}
+
+.portfolioItem:hover .projectLink {
+    opacity: 100%;
 }
 
 .portfolioThumbnail {
-    width:100%;
-    height:100%;
+    position: absolute;
+    width: 30vmin;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
 }
 
-.portfolioItem:hover {
-    background: #94749e;
-    color: #18442b;
-    opacity: 100%;
+.viewProject {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translate(15vmin, 20vmin) translate(-50%);
+}
+
+.projectLink {
+    opacity: 0%;
+    font-size: 0.8rem;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    transition: 0.2s;
+}
+
+.projectLink:hover {
+    background: var(--col4);
+    cursor: pointer;
+}
+
+.projectLink:active {
+    background: var(--col5);
 }
 
 #skills {
@@ -243,9 +264,8 @@ h2 {
 }
 
 .skill:hover {
-    color: var(--col5);
 }
-
+ 
 #contact {
     background: var(--col1);
     padding: 2rem;
