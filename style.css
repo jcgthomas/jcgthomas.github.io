@@ -269,9 +269,10 @@ h2 {
 #contact {
     background: var(--col1);
     padding: 2rem;
+    height: 100vh;
 }
 
-#surveyForm {
+#contactForm {
     display: flex;
     align-items: center;
     flex-direction: column;
