@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300&display=swap'); */
 
 :root {
-    --col1: #0f1123;
-    --col2: #4e3d53;
-    --col3: #a98b98;
-    --col4: #65a882;
-    --col5: #6ef7a9;
+    --col1: #222831;
+    --col2: #393e46;
+    --col3: #ffffffdd;
+    --col4: #00adb5;
+    --col5: #00adb5;
+    --col6: #ffffffdd;
 }
 
 * {
@@ -16,19 +18,19 @@
 
 h1, h2, h3, h4, h5, h6,
 button, input, select, textarea {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Bellota Text', 'Comfortaa', sans-serif;
 }
 ::-webkit-input-placeholder {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Bellota Text', 'Comfortaa', sans-serif;
 }
 :-moz-placeholder {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Bellota Text', 'Comfortaa', sans-serif;
 }
 ::-moz-placeholder {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Bellota Text', 'Comfortaa', sans-serif;
 }
 :-ms-input-placeholder {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Bellota Text', 'Comfortaa', sans-serif;
 }
 
 body {
@@ -36,7 +38,6 @@ body {
     font-size: 4rem;
     background-repeat: no-repeat;
     min-height: 100vh;
-    color:rgba(255, 255, 255, 0.8);
     cursor: default;
 }
 
@@ -66,7 +67,6 @@ header {
     transition: 1s;
 }
 
-
 #headerNav {
     display: flex;
     flex-direction: column;
@@ -81,13 +81,13 @@ header {
 
 .navLink:visited, .navLink:link, .navLink:active {
     text-decoration: none;
-    color:rgba(255, 255, 255);
-    transition: 0.3s;
+    color: var(--col6);
+    transition: 0.2s;
 }
 
 .navLink:hover {
-    background: rgba(0, 0, 0, 0.3);
-    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
     text-shadow: none;
 }
 
@@ -101,7 +101,7 @@ header {
 
 .mediaLink:visited, .mediaLink:link, .mediaLink:active {
     font-size: 2rem;
-    color:rgba(255, 255, 255);
+    color:white;
     text-decoration: none;
     opacity: 85%;
     transition: 0.3s;
@@ -113,7 +113,7 @@ header {
 
 main {
     padding-left: 8rem;
-    color:rgba(255, 255, 255, 0.8);
+    color:var(--col6);
 }
 
 #logo {
@@ -151,7 +151,7 @@ main {
 #cv {
     width: 2rem;
     height: 2rem;
-    color:rgba(255, 255, 255, 0.8);
+    color:var(--col6);
     font-size: 1.5rem;
     margin: 0 auto;
     text-decoration: none;
@@ -181,14 +181,14 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 1rem;
-    row-gap: 1rem;
+    column-gap: 0.4rem;
+    row-gap: 0.4rem;
 }
 
 .portfolioItem {
     width: 30vmin;
     height: 30vmin;
-    opacity: 75%;
+    opacity: 60%;
     background: var(--col2);
     color: white;
     transition: 0.2s;
@@ -205,7 +205,7 @@ h2 {
     transform: scale(1.05);
     transform-origin: 50% 50%;
     opacity: 100%;
-    background: #94749e;
+    background: var(--col3);
     color: white;
 }
 
@@ -251,19 +251,27 @@ h2 {
 #skills {
     background: linear-gradient(20deg, var(--col2), var(--col1));
     padding: 2rem;
+    font-size: 1rem;
 }
 
-#skillList {
-    padding-left: 1.5rem;
-    font-weight: 100;
+.column {
+    width: 40%;
+}
+
+.row {
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+
+#column1 {
+    text-align: right;
 }
 
 .skill {
     font-size: 1.1rem;
     padding: 0.5rem;
-}
-
-.skill:hover {
+    list-style: none;
 }
  
 #contact {
@@ -287,7 +295,7 @@ h2 {
 
 .formEntry {
     background: var(--col2);
-    color:rgba(255, 255, 255, 0.8);
+    color:var(--col6);
     padding: 0.7rem;
     width: 63vw;
     border: 1px solid var(--col3);
@@ -317,6 +325,8 @@ h2 {
     color: var(--col5);
     border: 1px solid var(--col4);
     border-radius: 0.3rem;
+    transition: 0.1s;
+    cursor: pointer;
 }
 
 #submit:hover {
@@ -325,5 +335,5 @@ h2 {
 
 #submit:active {
     background: var(--col4);
-    color: var(--col1)
+    color: var(--col1);
 }
