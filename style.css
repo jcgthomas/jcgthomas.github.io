@@ -483,4 +483,13 @@ h2 {
     #james {
         font-size: 3em;
     }
+ 
+    .formEntry {
+        width: 90vw;
+    }
+
+    #contactMessage {
+        max-width: 90vw;
+        min-width: 90vw;
+    }
 }
