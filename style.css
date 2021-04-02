@@ -483,6 +483,10 @@ h2 {
     #james {
         font-size: 3em;
     }
+
+    #portfolioWindow {
+        margin:0 10vw;
+    }
  
     .formEntry {
         width: 90vw;
