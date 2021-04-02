@@ -148,11 +148,11 @@ main {
 .introText {
     transition: 0.3s;
     text-shadow: 5px 5px 5px rgba(0,0,0,1);
-    font-size: 4rem;
+    font-size: 3em;
 }
 
 #james {
-    font-size: 5rem;
+    font-size: 4em;
 }
 
 #cv {
@@ -202,7 +202,7 @@ h2 {
     position: relative;
     text-decoration: none;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 3rem;
     text-shadow: 0 0 3px black;
 }
@@ -230,9 +230,7 @@ h2 {
 
 .viewProject {
     position: absolute;
-    left: 0px;
-    top: 0px;
-    transform: translate(15vmin, 20vmin) translate(-50%);
+    transform: translate(15vmin) translate(-50%);
 }
 
 .projectLink {
@@ -257,17 +255,17 @@ h2 {
 
 #skills {
     background: linear-gradient(20deg, var(--col2), var(--col1));
-    padding: 2rem;
-    font-size: 1rem;
+    padding: 0.5em;
+    font-size: 1em;
 }
 
 .column {
-    width: 40%;
+    width: 45%;
 }
 
 .row {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     
 }
 
@@ -369,6 +367,7 @@ h2 {
         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
         z-index: 1;
         overflow-x: hidden;
+        display: none;
     }
     
     #headerTop {
@@ -411,6 +410,7 @@ h2 {
 
     #headerNav a:last-of-type {
         border-right: 2px solid rgba(0, 0, 0, 0.2);
+        border-bottom: none;
     }
     
     .navLink:visited, .navLink:link, .navLink:active {
@@ -459,5 +459,44 @@ h2 {
         padding-left: 0em;
         color:var(--col6);
     }
-       
+
+    #intro {
+        padding-left: 1rem;
+        background: linear-gradient(120deg, var(--col1), var(--col2));
+        height: 100vh;
+    }
+    
+    #introJames {
+        padding-top: 40vh;
+    
+    }
+    
+    .introText {
+        transition: 0.3s;
+        text-shadow: 5px 5px 5px rgba(0,0,0,1);
+        font-size: 2rem;
+    }
+    
+    #james {
+        font-size: 3em;
+    }
+
+    .viewProject {
+        position: absolute;
+        transform: translate(15vmin) translate(-50%);
+        display: flex;
+        height: 2.5em;
+    }
+
+    .projectLink {
+        line-height: 1em;
+        padding: 0.5em;
+        opacity: 0%;
+        font-size: 0.8rem;
+        text-decoration: none;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        transition: 0.2s;
+    }      
 }
