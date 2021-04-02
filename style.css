@@ -185,28 +185,41 @@ h2 {
 }
 
 #portfolioWindow {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    align-items: center;
     justify-content: center;
-    column-gap: 0.4rem;
-    row-gap: 0.4rem;
+    padding: 0 0.2em;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 0.2em;
 }
 
 .portfolioItem {
-    width: 30vmin;
-    height: 30vmin;
     opacity: 60%;
-    background: var(--col2);
-    color: white;
     transition: 0.2s;
-    position: relative;
     text-decoration: none;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 3rem;
-    text-shadow: 0 0 3px black;
+    display: flex;
+    justify-content: center;
+    background: var(--col2);
 }
 
+.portfolioItem:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    padding-bottom: 100%;
+}
+
+#item1 {
+    background: url("./Snap\ Thumbnail.jpg") center;
+    background-size: cover;
+}
+
+#item2 {
+    background: url("./Memory\ Thumbnail.jpg") center;
+    background-size: cover;
+}
 
 .portfolioItem:hover {
     transform: scale(1.05);
@@ -220,17 +233,7 @@ h2 {
     opacity: 100%;
 }
 
-.portfolioThumbnail {
-    position: absolute;
-    width: 30vmin;
-    z-index: -1;
-    left: 0px;
-    top: 0px;
-}
-
 .viewProject {
-    position: absolute;
-    transform: translate(15vmin) translate(-50%);
 }
 
 .projectLink {
@@ -480,23 +483,4 @@ h2 {
     #james {
         font-size: 3em;
     }
-
-    .viewProject {
-        position: absolute;
-        transform: translate(15vmin) translate(-50%);
-        display: flex;
-        height: 2.5em;
-    }
-
-    .projectLink {
-        line-height: 1em;
-        padding: 0.5em;
-        opacity: 0%;
-        font-size: 0.8rem;
-        text-decoration: none;
-        background: rgba(0, 0, 0, 0.6);
-        color: white;
-        border: none;
-        transition: 0.2s;
-    }      
 }
