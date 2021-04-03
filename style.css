@@ -393,7 +393,7 @@ h2 {
     
     .burgerTop {
         background: white;
-        height: 0.3em;
+        height: 0.2em;
         border-radius: 0.1em;
         width: 75%;
         position: absolute;
@@ -406,7 +406,7 @@ h2 {
     
     .burgerMid {
         background: white;
-        height: 0.3em;
+        height: 0.2em;
         border-radius: 0.1em;
         width: 75%;
         position: absolute;
@@ -418,7 +418,7 @@ h2 {
     
     .burgerBot {
         background: white;
-        height: 0.3em;
+        height: 0.2em;
         border-radius: 0.1em;
         width: 75%;
         position: absolute;
