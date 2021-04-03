@@ -204,6 +204,18 @@ h2 {
     grid-gap: 0.2em;
 }
 
+@media (max-width: 913px) {
+    #portfolioWindow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    #portfolioWindow {
+        grid-template-columns: 1fr;
+    }
+}
+
 .portfolioItem {
     opacity: 60%;
     transition: 0.2s;
@@ -460,7 +472,7 @@ h2 {
     }
 
     #intro {
-        padding-left: 1rem;
+        padding-left: 1em;
         background: linear-gradient(120deg, var(--col1), var(--col2));
         height: 100vh;
     }
@@ -480,6 +492,10 @@ h2 {
         font-size: 3em;
     }
  
+    #portfolioWindow {
+        padding: 1em;
+    }
+
     .formEntry {
         width: 90vw;
     }
