@@ -16,6 +16,12 @@
     box-sizing: border-box;
 }
 
+#burger {
+    top: 0;
+    z-index: 1;
+    position: fixed;
+}
+
 h1, h2, h3, h4, h5, h6,
 button, input, select, textarea {
     font-family: 'Bellota Text', 'Comfortaa', sans-serif;
@@ -41,6 +47,10 @@ body {
     cursor: default;
 }
 
+#burger input {
+    display: none;
+}
+
 header {
     width: 8rem;
     background: var(--col4);
@@ -54,7 +64,7 @@ header {
     text-align: center;
     text-decoration: none;
     box-shadow: 5px 0px 5px rgb(0,0,0,0.2);
-    z-index: 1;
+    z-index: 0;
     overflow-x: hidden;
 }
 
@@ -233,9 +243,6 @@ h2 {
     opacity: 100%;
 }
 
-.viewProject {
-}
-
 .projectLink {
     opacity: 0%;
     font-size: 0.8rem;
@@ -285,6 +292,7 @@ h2 {
 #contact {
     background: var(--col1);
     padding: 2rem;
+    min-height: 100%;
     height: 100vh;
 }
 
@@ -350,6 +358,77 @@ h2 {
 
 @media (max-width: 43em) {
 
+    #burger {
+        top: 0;
+        right: 0;
+        width: 3em;
+        height: 3em;
+        z-index: 1;
+        position: fixed;
+        transition: 1.2s;
+    }
+    
+    #burger input {
+        display: block;
+        position: fixed;
+        transform: translate(4px, 4px);
+        opacity: 0;
+        width: 3em;
+        height: 3em;
+        z-index: 2;
+    }
+    
+    #burger input:checked ~ .burgerTop {
+        transform: rotate(-45deg) translateY(-2px);
+    }
+    
+    #burger input:checked ~ .burgerMid {
+        opacity: 0;
+        transform: scale(0.2, 0.2);
+    }
+    
+    #burger input:checked ~ .burgerBot {
+        transform: rotate(45deg) translateY(1px);
+    }
+    
+    .burgerTop {
+        background: white;
+        height: 0.3em;
+        border-radius: 0.1em;
+        width: 75%;
+        position: absolute;
+        top: 20%;
+        left: 12.5%;
+        transform-origin: right;
+        transition: 0.2s;
+        z-index: 1;
+    }
+    
+    .burgerMid {
+        background: white;
+        height: 0.3em;
+        border-radius: 0.1em;
+        width: 75%;
+        position: absolute;
+        top: 45%;
+        left: 12.5%;
+        transition: 0.2s;
+        z-index: 1;
+    }
+    
+    .burgerBot {
+        background: white;
+        height: 0.3em;
+        border-radius: 0.1em;
+        width: 75%;
+        position: absolute;
+        top: 70%;
+        left: 12.5%;
+        transform-origin: right;
+        transition: 0.2s;
+        z-index: 1;
+    }
+
     body {
         font-family: 'Comfortaa', sans-serif;
         font-size: 1em;
@@ -358,104 +437,15 @@ h2 {
     }
     
     header {
-        width: 100vw;
-        background: var(--col4);
-        height: 4em;
-        position: fixed;
-        display: flex;
-        flex-direction: row;
-        font-size: 1em;
-        text-align: center;
-        text-decoration: none;
-        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        overflow-x: hidden;
-        display: none;
-    }
-    
-    #headerTop {
-        width: 4em;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-    }
-
-    #logoContainer {
-        padding: 0.5em;
-    }
-    
-    #logo {
-        opacity: 90%;
-        width: 3em;
-        height: 3em;
-        transition: 0.3s;
-    }
-    
-    #logo:hover {
-        transform: rotate(10deg);
-        opacity: 100%;
-    }
-    
-    #headerNav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
-    
-    .navLink {
-        width: 15vw;
-        height: 100%;
-        line-height: 4em;
-        border-left: 2px solid rgba(0, 0, 0, 0.2);
-    }
-
-    #headerNav a:last-of-type {
-        border-right: 2px solid rgba(0, 0, 0, 0.2);
-        border-bottom: none;
-    }
-    
-    .navLink:visited, .navLink:link, .navLink:active {
-        text-decoration: none;
-        color: var(--col6);
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
         transition: 0.2s;
-        border-top: none;
-    }
-    
-    .navLink:hover {
-        background: rgba(0, 0, 0, 0.1);
-        color: white;
-        text-shadow: none;
+        padding-top: 2em;
     }
 
-    .navLink:active {
-        background: rgba(0, 0, 0, 0.1);
-        color: white;
-        text-shadow: none;
-    }
-    
-    #headerBottom {
-        padding: 0;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        border-top: none;
-        width: 8em;
-        justify-content: space-evenly;
-    }
-    
-    .mediaLink:visited, .mediaLink:link, .mediaLink:active {
-        font-size: 2em;
-        color:white;
-        text-decoration: none;
-        opacity: 85%;
-        transition: 0.3s;
-        width: 2em;
-    }
-    
-    .mediaLink:hover {
-        opacity: 100%;
+    #burger input:checked ~ header {
+        transform: none;
     }
     
     main {
@@ -482,10 +472,6 @@ h2 {
     
     #james {
         font-size: 3em;
-    }
-
-    #portfolioWindow {
-        padding: 0 10vw;
     }
  
     .formEntry {
