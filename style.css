@@ -164,16 +164,6 @@ main {
     font-size: 4em;
 }
 
-#introP {
-    display:flex;
-    font-size: 1em;
-    padding: 1em;
-    flex-wrap: wrap;
-    width: 60vw;
-    text-shadow: 2px 2px 2px rgba(0,0,0,1);
-    transition: 1s;
-}
-
 #portfolio {
     padding: 1em 0;
     background: var(--col1);
@@ -185,13 +175,14 @@ h2 {
     font-size: 2.5rem;
     font-weight: 300;
     text-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+    padding-bottom: 1em;
 }
 
 #portfolioWindow {
     display: grid;
     align-items: center;
     justify-content: center;
-    padding: 1em 0.2em;
+    padding: 0 0.2em;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-template-rows: 1fr;
     grid-gap: 0.2em;
@@ -271,7 +262,7 @@ h2 {
 #skills {
     background: linear-gradient(20deg, var(--col2), var(--col1));
     padding: 2em 0;
-    padding: 2em 0;
+    padding: 2em 2vw;
     font-size: 1em;
 }
 
