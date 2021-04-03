@@ -445,7 +445,8 @@ h2 {
     }
 
     #headerBottom {
-        padding: 0.5em 0 2em 0;
+        margin-bottom: 15vh;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     }
 
     #burger input:checked ~ header {
