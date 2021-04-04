@@ -20,7 +20,7 @@ $("document").ready(() => {
             let p = k;
             let q = k;
             $(j).css("opacity", "5%")
-                .css("transition", `${(k/100)+2}s`)
+                .css("transition", `${(k/50)+1}s`)
                 .css("background", `hsl(0, 0%, ${(l/2)+50}%)`)
                 .css("transform", `translate(${(m/10)-5}px, ${(n/10)-5}px)
                                    rotate(${(o/20)-2.5}deg)
