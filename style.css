@@ -44,6 +44,7 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
     cursor: default;
+    overflow-x: hidden;
 }
 
 #burger input {
@@ -144,14 +145,36 @@ main {
 }
 
 #intro {
-    padding-left: 2rem;
     background: linear-gradient(120deg, var(--col1), var(--col2));
     height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.backgroundGrid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.gridSquare {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    opacity: 2%;
+}
+
+.gridSquare:hover {
+    background: rgba(255,255,255);
 }
 
 #introJames {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    padding-left: 2rem;
     padding-top: 30vh;
-
 }
 
 .introText {
@@ -467,7 +490,6 @@ p {
     }
 
     #intro {
-        padding-left: 1em;
         background: linear-gradient(120deg, var(--col1), var(--col2));
         height: 100vh;
     }
