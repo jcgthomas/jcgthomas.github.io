@@ -206,12 +206,13 @@ main {
 }
 
 .gridSquare {
-    border-radius: 0%;
-    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 10%;
+    background: var(--col5);
+    transform: scale(1.05);
 }
 
 .gridSquare:active {
-    filter: hue-rotate(90deg);
+    filter: hue-rotate(180deg);
 }
 
 
@@ -536,7 +537,7 @@ p {
 
     #burger input:checked ~ header {
         transform: translateX(-200px);
-        box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.4);
+        box-shadow: -1px 0px 2px 2px rgba(0, 0, 0, 0.2);
     }
     
     main {
