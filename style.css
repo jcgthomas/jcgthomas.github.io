@@ -40,7 +40,7 @@ button, input, select, textarea {
 
 body {
     font-family: 'Comfortaa', sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
     background-repeat: no-repeat;
     min-height: 100vh;
     cursor: default;
@@ -52,7 +52,7 @@ body {
 }
 
 header {
-    width: 8em;
+    width: 8rem;
     background: var(--col4);
     height: 100vh;
     position: fixed;
@@ -60,7 +60,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     text-align: center;
     text-decoration: none;
     box-shadow: 5px 0px 5px rgb(0,0,0,0.2);
@@ -245,7 +245,7 @@ main {
 h2 {
     text-align: center;
     font-size: 2.5rem;
-    font-weight: 300;
+    font-weight: 500;
     text-shadow: 5px 5px 5px rgba(0,0,0,0.8);
     padding-bottom: 1em;
 }
@@ -254,13 +254,13 @@ h2 {
     display: grid;
     align-items: center;
     justify-content: center;
-    padding: 0 0.2em;
+    padding: 0 2vw;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-template-rows: 1fr;
-    grid-gap: 0.2em;
+    grid-gap: 0.3em;
 }
 
-@media (max-width: 913px) {
+@media (max-width: 950px) {
     #portfolioWindow {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -279,6 +279,7 @@ h2 {
     display: flex;
     justify-content: center;
     background: var(--col2);
+    border: 5px solid var(--col5);
 }
 
 .portfolioItem:before {
@@ -307,12 +308,18 @@ h2 {
     color: white;
 }
 
-.portfolioItem:hover .projectLink {
+.viewProject {
+    display: none;
+    opacity: 0%;
+    transition: 1s;
+}
+
+.portfolioItem:hover .viewProject {
+    display:block;
     opacity: 100%;
 }
 
 .projectLink {
-    opacity: 0%;
     font-size: 0.8rem;
     text-decoration: none;
     background: rgba(0, 0, 0, 0.6);
@@ -515,7 +522,7 @@ p {
     
     header {
         top: 0;
-        right: -8em;
+        right: -200px;
         transition: 0.15s;
         padding-top: 2em;
     }
@@ -526,7 +533,7 @@ p {
     }
 
     #burger input:checked ~ header {
-        transform: translateX(-8em);
+        transform: translateX(-200px);
         box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.4);
     }
     
@@ -548,7 +555,7 @@ p {
     .introText {
         transition: 0.3s;
         text-shadow: 5px 5px 5px rgba(0,0,0,1);
-        font-size: 2em;
+        font-size: 2rem;
     }
     
     #james {
