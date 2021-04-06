@@ -162,11 +162,7 @@ main {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    opacity: 2%;
-}
-
-.gridSquare:hover {
-    background: rgba(255,255,255);
+    opacity: 10%;
 }
 
 #introJames {
