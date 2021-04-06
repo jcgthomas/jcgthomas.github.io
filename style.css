@@ -5,8 +5,8 @@
     --col1: #222831;
     --col2: #393e46;
     --col3: #ffffffdd;
-    --col4: #00adb5;
-    --col5: #00c3ce;
+    --col4: #009199;
+    --col5: #00b3bd;
 }
 
 * {
@@ -206,16 +206,12 @@ main {
 }
 
 .gridSquare {
-    background: white;
-    opacity: 50%;
-    transition: 2s;
     border-radius: 0%;
-    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .gridSquare:active {
     filter: hue-rotate(90deg);
-    margin: -20%;
 }
 
 
@@ -223,7 +219,7 @@ main {
     pointer-events: none;
     position: absolute;
     top: 0;
-    padding-left: 2rem;
+    padding-left: 5vw;
     padding-top: 30vh;
 }
 
@@ -232,11 +228,13 @@ main {
     text-shadow: 2px 2px 10px rgba(0,0,0,1);
     font-size: 3em;
     opacity: 95%;
+    font-size: 3em;
 }
 
 #james {
     font-size: 4em;
 }
+
 
 #portfolio {
     padding: 1em 0;
@@ -335,8 +333,7 @@ h2 {
 
 #skills {
     background: linear-gradient(20deg, var(--col2), var(--col1));
-    padding: 2em 0;
-    padding: 2em 2vw;
+    padding: 4em 2vw;
     font-size: 1em;
 }
 
@@ -372,7 +369,7 @@ p {
  
 #contact {
     background: var(--col1);
-    padding: 2em 0;
+    padding: 4em 0;
     min-height: 500px;
     height: 100vh;
 }
@@ -446,7 +443,6 @@ p {
         height: 3em;
         z-index: 1;
         position: fixed;
-        transition: 3s;
     }
     
     #burger input {
@@ -519,8 +515,7 @@ p {
     
     header {
         top: 0;
-        right: 0;
-        transform: translateX(100%);
+        right: -20vw;
         transition: 0.15s;
         padding-top: 2em;
     }
@@ -531,7 +526,7 @@ p {
     }
 
     #burger input:checked ~ header {
-        transform: none;
+        transform: translateX(-20vw);
         box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.4);
     }
     
