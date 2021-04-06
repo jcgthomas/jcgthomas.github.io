@@ -10,6 +10,19 @@ $("document").ready(() => {
         });
     });
 
+    let GRID_SQUARE_SIZE = 75;
+    const MAX_GRID_DIMENSIONS = 12;
+    let width = $("#intro").width();
+    let height = $("#intro").height();
+    if (width/10 > GRID_SQUARE_SIZE || height/10 > GRID_SQUARE_SIZE) {
+        width > height ? GRID_SQUARE_SIZE = width/MAX_GRID_DIMENSIONS : GRID_SQUARE_SIZE = height/MAX_GRID_DIMENSIONS;
+    }
+    for (let i = 0; i < (Math.floor(width/GRID_SQUARE_SIZE)*Math.floor(height/GRID_SQUARE_SIZE)); i++) {
+        $(".backgroundGrid").append(`<div class="gridSquare"></div>`);
+    }
+    $(".backgroundGrid").css("grid-template-columns", `repeat(${Math.floor(width/GRID_SQUARE_SIZE)}, 1fr)`);
+
+
     $(".gridSquare").each(function(i, j) {
         function animateSquare() {
             let k = Math.floor(Math.random()*100);
