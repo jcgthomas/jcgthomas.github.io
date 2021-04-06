@@ -40,7 +40,7 @@ button, input, select, textarea {
 
 body {
     font-family: 'Comfortaa', sans-serif;
-    font-size: 1rem;
+    font-size: 1em;
     background-repeat: no-repeat;
     min-height: 100vh;
     cursor: default;
@@ -52,7 +52,7 @@ body {
 }
 
 header {
-    width: 8rem;
+    width: 8em;
     background: var(--col4);
     height: 100vh;
     position: fixed;
@@ -60,7 +60,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     text-align: center;
     text-decoration: none;
     box-shadow: 5px 0px 5px rgb(0,0,0,0.2);
@@ -515,7 +515,7 @@ p {
     
     header {
         top: 0;
-        right: -20vw;
+        right: -8em;
         transition: 0.15s;
         padding-top: 2em;
     }
@@ -526,7 +526,7 @@ p {
     }
 
     #burger input:checked ~ header {
-        transform: translateX(-20vw);
+        transform: translateX(-8em);
         box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.4);
     }
     
@@ -548,7 +548,7 @@ p {
     .introText {
         transition: 0.3s;
         text-shadow: 5px 5px 5px rgba(0,0,0,1);
-        font-size: 2rem;
+        font-size: 2em;
     }
     
     #james {
