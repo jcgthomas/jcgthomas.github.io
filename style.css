@@ -273,13 +273,14 @@ h2 {
 }
 
 .portfolioItem {
-    opacity: 60%;
+    opacity: 80%;
     transition: 0.2s;
     text-decoration: none;
     display: flex;
     justify-content: center;
     background: var(--col2);
     border: 5px solid var(--col5);
+    filter:saturate(50%);
 }
 
 .portfolioItem:before {
@@ -306,6 +307,7 @@ h2 {
     opacity: 100%;
     background: var(--col3);
     color: white;
+    filter: none;
 }
 
 .viewProject {
@@ -315,7 +317,7 @@ h2 {
 }
 
 .portfolioItem:hover .viewProject {
-    display:block;
+    display: block;
     opacity: 100%;
 }
 
