@@ -67,6 +67,7 @@ header {
     z-index: 0;
     overflow-x: hidden;
     border: 3px solid var(--col5);
+    transition: 0.5s;
 }
 
 #headerTop {
@@ -157,12 +158,55 @@ main {
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(10, 1fr);
+    animation: gridSway 50s ease-in-out infinite alternate;
+}
+
+@keyframes gridSway {
+    10% {
+        transform: translate(1px, 1px) rotate(0.1deg) scale(1.01, 1.01);
+        opacity: 95%;
+    }
+    20% {
+        transform: translate(0px, 0px) rotate(0.2deg) scale(1.02, 1.01);
+        opacity: 90%;
+    }
+    30% {
+        transform: translate(0px, -1px) rotate(0.1deg) scale(1.01, 1.02);
+        opacity: 95%;
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(0deg) scale(1.01, 1.03);
+        opacity: 100%;
+    }
+    50% {
+        transform: translate(0px, 0px) rotate(-0.1deg) scale(1.02, 1.02);
+        opacity: 90%;
+    }
+    60% {
+        transform: translate(0px, -1px) rotate(-0.2deg) scale(1.03, 1.02);
+        opacity: 100%;
+    }
+    70% {
+        transform: translate(-1px, -1px) rotate(-0.1deg) scale(1.02, 1.01);
+        opacity: 95%;
+    }
+    80% {
+        transform: translate(1px, 0px) rotate(0deg) scale(1.01, 1.02);
+        opacity: 90%;
+    }
+    90% {
+        transform: translate(0px, -1px) rotate(0.1deg) scale(1.01, 1.01);
+        opacity: 95%;
+    }
+    100% {
+        transform: translate(1px, 1px) rotate(0deg) scale(1.01, 1.01);
+        opacity: 100%;
+    }
 }
 
 .gridSquare {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
+    border-radius: 0%;
+    z-index: 2;
 }
 
 #introJames {
@@ -177,7 +221,7 @@ main {
     transition: 0.3s;
     text-shadow: 2px 2px 10px rgba(0,0,0,1);
     font-size: 3em;
-    opacity: 90%;
+    opacity: 95%;
 }
 
 #james {
