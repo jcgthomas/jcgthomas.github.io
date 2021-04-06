@@ -1,3 +1,17 @@
+
+let GRID_SQUARE_SIZE = 80;
+const MAX_GRID_DIMENSIONS = 12;
+let width = $("#intro").width();
+let height = $("#intro").height();
+if (width/10 > GRID_SQUARE_SIZE || height/10 > GRID_SQUARE_SIZE) {
+    width > height ? GRID_SQUARE_SIZE = width/MAX_GRID_DIMENSIONS : GRID_SQUARE_SIZE = height/MAX_GRID_DIMENSIONS;
+}
+for (let i = 0; i < (Math.floor(width/GRID_SQUARE_SIZE)*Math.floor(height/GRID_SQUARE_SIZE)); i++) {
+    $(".backgroundGrid").append(`<div class="gridSquare"></div>`);
+}
+$(".backgroundGrid").css("grid-template-columns", `repeat(${Math.floor(width/GRID_SQUARE_SIZE)}, 1fr)`);
+
+
 $("document").ready(() => {
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -9,19 +23,6 @@ $("document").ready(() => {
             });
         });
     });
-
-    let GRID_SQUARE_SIZE = 80;
-    const MAX_GRID_DIMENSIONS = 12;
-    let width = $("#intro").width();
-    let height = $("#intro").height();
-    if (width/10 > GRID_SQUARE_SIZE || height/10 > GRID_SQUARE_SIZE) {
-        width > height ? GRID_SQUARE_SIZE = width/MAX_GRID_DIMENSIONS : GRID_SQUARE_SIZE = height/MAX_GRID_DIMENSIONS;
-    }
-    for (let i = 0; i < (Math.floor(width/GRID_SQUARE_SIZE)*Math.floor(height/GRID_SQUARE_SIZE)); i++) {
-        $(".backgroundGrid").append(`<div class="gridSquare"></div>`);
-    }
-    $(".backgroundGrid").css("grid-template-columns", `repeat(${Math.floor(width/GRID_SQUARE_SIZE)}, 1fr)`);
-
 
     $(".gridSquare").each(function(i, j) {
         function animateSquare() {
@@ -35,7 +36,7 @@ $("document").ready(() => {
             let o = Math.floor(Math.random()*100);
             let p = Math.floor(Math.random()*100);
             $(j).css("opacity", `${(l-50)/1.5}%`)
-                .css("transition", `${((l-100)/-10)+1}s`)
+                .css("transition", `${((l-100)/-20)+1}s`)
                 .css("background", `hsl(0, 0%, ${l}%)`)
                 .css("transform", `translate(${(m/100)-0.5}vw, ${(n/100)-0.5}vh)
                                    rotate(${(o/20)-2.5}deg)
@@ -50,8 +51,11 @@ $("document").ready(() => {
                 .css("background", `hsl(${r}, 40%, 60%)`)
                 .css("box-shadow", `0 0 1px 1px hsl(${r}, 40%, 60%)`);
         }
-        animateSquare();
-        setInterval(animateSquare, Math.floor(Math.random()*100)*500+4000);
+
         $(j).hover(hoverSquare, animateSquare);
+        
+        setInterval(animateSquare, Math.floor(Math.random()*100)*500+4000);
+
+        animateSquare();
     })
 });
