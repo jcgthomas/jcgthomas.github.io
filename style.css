@@ -158,7 +158,7 @@ main {
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(10, 1fr);
-    animation: gridSway 50s ease-in-out infinite alternate;
+    animation: gridSway 60s ease-in-out infinite alternate;
 }
 
 @keyframes gridSway {
