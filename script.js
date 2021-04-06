@@ -40,17 +40,15 @@ $("document").ready(() => {
                 .css("transform", `translate(${(m/100)-0.5}vw, ${(n/100)-0.5}vh)
                                    rotate(${(o/20)-2.5}deg)
                                    scale(${(p/500)+0.85}, ${(p/500)+0.85})`)
-                .css("box-shadow", `0 0 3px 3px hsl(0, 0%, ${l}%)`)
-                .css("border-radius", "0%");
+                .css("box-shadow", `0 0 3px 3px hsl(0, 0%, ${l}%)`);
         }
 
         function hoverSquare() {
             let r = Math.floor(Math.random()*359);
-            $(j).css("opacity", "50%")
+            $(j).css("opacity", "90%")
                 .css("transition", "0.3s")
                 .css("background", `hsl(${r}, 40%, 60%)`)
-                .css("box-shadow", `0 0 3px 3px hsl(${r}, 40%, 60%)`)
-                .css("border-radius", "5%");
+                .css("box-shadow", `0 0 1px 1px hsl(${r}, 40%, 60%)`);
         }
         animateSquare();
         setInterval(animateSquare, Math.floor(Math.random()*100)*500+4000);
