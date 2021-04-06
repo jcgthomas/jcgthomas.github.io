@@ -208,7 +208,6 @@ main {
 .gridSquare {
     background: white;
     opacity: 100%;
-    margin: -100%;
     border-radius: 0%;
     z-index: 2;
 }
