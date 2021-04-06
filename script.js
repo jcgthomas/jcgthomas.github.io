@@ -27,20 +27,20 @@ $("document").ready(() => {
         function animateSquare() {
             let k = Math.floor(Math.random()*100);
             let l = Math.floor(Math.random()*100);
-            if (l < 90) {
+            if (l < 80) {
                 l = (l / 5) + 50;
             }
             let m = Math.floor(Math.random()*100);
             let n = Math.floor(Math.random()*100);
             let o = Math.floor(Math.random()*100);
             let p = Math.floor(Math.random()*100);
-            $(j).css("opacity", `${(l-40)/2}%`)
+            $(j).css("opacity", `${(l-50)/1.5}%`)
                 .css("transition", `${(k/10)+2}s`)
                 .css("background", `hsl(0, 0%, ${l}%)`)
                 .css("transform", `translate(${(m/100)-0.5}vw, ${(n/100)-0.5}vh)
-                                   rotate(${(o/20)-2.5}deg)
-                                   scale(${(p/600)+0.8}, ${(p/600)+0.8})`)
-                .css("box-shadow", `0 0 5px 8px hsl(0, 0%, ${l}%)`)
+                                   rotate(${(o/15)-3.3}deg)
+                                   scale(${(p/220)+0.7}, ${(p/220)+0.7})`)
+                .css("box-shadow", `0 0 8px 8px hsl(0, 0%, ${l}%)`)
                 .css("border-radius", "0%");
         }
 
@@ -48,8 +48,8 @@ $("document").ready(() => {
             let r = Math.floor(Math.random()*359);
             $(j).css("opacity", "60%")
                 .css("transition", "0.3s")
-                .css("background", `hsl(${r}, 20%, 60%)`)
-                .css("box-shadow", `0 0 10px 10px hsl(${r}, 20%, 60%)`)
+                .css("background", `hsl(${r}, 40%, 60%)`)
+                .css("box-shadow", `0 0 15px 15px hsl(${r}, 40%, 60%)`)
                 .css("border-radius", "5%");
         }
         animateSquare();
