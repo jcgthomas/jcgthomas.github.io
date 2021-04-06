@@ -147,8 +147,9 @@ main {
 }
 
 #intro {
-    background: linear-gradient(120deg, var(--col1), var(--col2));
-    height: 100vh;
+    background: linear-gradient(var(--col2), var(--col1));
+    height: 104vh;
+    padding-bottom: 4vh;
     width: 100%;
     overflow: hidden;
 }
@@ -158,49 +159,49 @@ main {
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(10, 1fr);
-    animation: gridSway 60s ease-in-out infinite alternate;
+    animation: gridSway 100s linear infinite alternate;
 }
 
 @keyframes gridSway {
     10% {
-        transform: translate(1px, 1px) rotate(0.1deg) scale(1.01, 1.01);
-        opacity: 95%;
+        transform: translate(1px, 1px) rotate(0.2deg) scale(1.01, 1.01);
+        opacity: 70%;
     }
     20% {
-        transform: translate(0px, 0px) rotate(0.2deg) scale(1.02, 1.01);
+        transform: translate(0px, 0px) rotate(0.4deg) scale(1.02, 1.01);
         opacity: 90%;
     }
     30% {
-        transform: translate(0px, -1px) rotate(0.1deg) scale(1.01, 1.02);
-        opacity: 95%;
+        transform: translate(0px, -1px) rotate(0.2deg) scale(1.01, 1.02);
+        opacity: 60%;
     }
     40% {
         transform: translate(1px, -1px) rotate(0deg) scale(1.01, 1.03);
-        opacity: 100%;
+        opacity: 80%;
     }
     50% {
-        transform: translate(0px, 0px) rotate(-0.1deg) scale(1.02, 1.02);
-        opacity: 90%;
-    }
-    60% {
-        transform: translate(0px, -1px) rotate(-0.2deg) scale(1.03, 1.02);
+        transform: translate(0px, 0px) rotate(-0.2deg) scale(1.02, 1.02);
         opacity: 100%;
     }
+    60% {
+        transform: translate(0px, -1px) rotate(-0.4deg) scale(1.03, 1.02);
+        opacity: 70%;
+    }
     70% {
-        transform: translate(-1px, -1px) rotate(-0.1deg) scale(1.02, 1.01);
+        transform: translate(-1px, -1px) rotate(-0.2deg) scale(1.02, 1.01);
         opacity: 95%;
     }
     80% {
         transform: translate(1px, 0px) rotate(0deg) scale(1.01, 1.02);
-        opacity: 90%;
+        opacity: 60%;
     }
     90% {
-        transform: translate(0px, -1px) rotate(0.1deg) scale(1.01, 1.01);
+        transform: translate(0px, -1px) rotate(0.2deg) scale(1.01, 1.01);
         opacity: 95%;
     }
     100% {
         transform: translate(1px, 1px) rotate(0deg) scale(1.01, 1.01);
-        opacity: 100%;
+        opacity: 80%;
     }
 }
 
