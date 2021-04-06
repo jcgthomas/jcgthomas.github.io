@@ -66,6 +66,7 @@ header {
     box-shadow: 5px 0px 5px rgb(0,0,0,0.2);
     z-index: 0;
     overflow-x: hidden;
+    border: 3px solid var(--col5);
 }
 
 #headerTop {
@@ -162,7 +163,6 @@ main {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    opacity: 10%;
 }
 
 #introJames {
@@ -175,8 +175,9 @@ main {
 
 .introText {
     transition: 0.3s;
-    text-shadow: 5px 5px 5px rgba(0,0,0,1);
+    text-shadow: 2px 2px 5px rgba(0,0,0,1);
     font-size: 3em;
+    opacity: 80%;
 }
 
 #james {
