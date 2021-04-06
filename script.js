@@ -35,25 +35,25 @@ $("document").ready(() => {
             let o = Math.floor(Math.random()*100);
             let p = Math.floor(Math.random()*100);
             $(j).css("opacity", `${(l-50)/1.5}%`)
-                .css("transition", `${(k/10)+2}s`)
+                .css("transition", `${((l-100)/-10)+1}s`)
                 .css("background", `hsl(0, 0%, ${l}%)`)
                 .css("transform", `translate(${(m/100)-0.5}vw, ${(n/100)-0.5}vh)
-                                   rotate(${(o/15)-3.3}deg)
-                                   scale(${(p/220)+0.7}, ${(p/220)+0.7})`)
-                .css("box-shadow", `0 0 8px 8px hsl(0, 0%, ${l}%)`)
+                                   rotate(${(o/20)-2.5}deg)
+                                   scale(${(p/500)+0.85}, ${(p/500)+0.85})`)
+                .css("box-shadow", `0 0 3px 3px hsl(0, 0%, ${l}%)`)
                 .css("border-radius", "0%");
         }
 
         function hoverSquare() {
             let r = Math.floor(Math.random()*359);
-            $(j).css("opacity", "60%")
+            $(j).css("opacity", "50%")
                 .css("transition", "0.3s")
                 .css("background", `hsl(${r}, 40%, 60%)`)
-                .css("box-shadow", `0 0 15px 15px hsl(${r}, 40%, 60%)`)
+                .css("box-shadow", `0 0 3px 3px hsl(${r}, 40%, 60%)`)
                 .css("border-radius", "5%");
         }
         animateSquare();
-        setInterval(animateSquare, Math.floor(Math.random()*100)*300+8000);
+        setInterval(animateSquare, Math.floor(Math.random()*100)*500+4000);
         $(j).hover(hoverSquare, animateSquare);
     })
 });
