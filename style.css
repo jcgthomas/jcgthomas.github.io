@@ -210,6 +210,12 @@ main {
     z-index: 2;
 }
 
+.gridSquare:active {
+    filter: hue-rotate(90deg);
+    margin: -20%;
+}
+
+
 #introJames {
     pointer-events: none;
     position: absolute;
@@ -451,16 +457,16 @@ p {
     }
     
     #burger input:checked ~ .burgerTop {
-        transform: rotate(-135deg) translate(19px, -18px);
+        transform: rotate(-495deg) translate(19px, -18px);
     }
     
     #burger input:checked ~ .burgerMid {
         opacity: 0;
-        transform: scale(0.1, 0.1);
+        transform: translate(100%);
     }
     
     #burger input:checked ~ .burgerBot {
-        transform: rotate(135deg) translate(19px, 19px);
+        transform: rotate(495deg) translate(19px, 19px);
     }
     
     .burgerTop {
@@ -484,7 +490,7 @@ p {
         position: absolute;
         top: 45%;
         left: 12.5%;
-        transition: 0.5s;
+        transition: 0.3s;
         z-index: 1;
     }
     
@@ -512,7 +518,7 @@ p {
         top: 0;
         right: 0;
         transform: translateX(100%);
-        transition: 0.2s;
+        transition: 0.15s;
         padding-top: 2em;
     }
 
@@ -532,8 +538,8 @@ p {
     }
 
     #intro {
-        background: linear-gradient(120deg, var(--col1), var(--col2));
-        height: 100vh;
+        background: linear-gradient(var(--col2), var(--col1));
+        height: 104vh;
     }
     
     #introJames {
