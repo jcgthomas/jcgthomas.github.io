@@ -207,7 +207,8 @@ main {
 
 .gridSquare {
     background: white;
-    opacity: 100%;
+    opacity: 50%;
+    transition: 2s;
     border-radius: 0%;
     z-index: 2;
 }
