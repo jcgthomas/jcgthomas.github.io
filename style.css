@@ -206,7 +206,7 @@ main {
 }
 
 .gridSquare {
-    opacity: 10%;
+    opacity: 25%;
     background: var(--col5);
     transform: scale(1.05);
 }
@@ -267,7 +267,7 @@ h2 {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 460px) {
     #portfolioWindow {
         grid-template-columns: 1fr;
     }
@@ -528,6 +528,7 @@ p {
         right: -200px;
         transition: 0.15s;
         padding-top: 2em;
+        opacity: 80%;
     }
 
     #headerBottom {
