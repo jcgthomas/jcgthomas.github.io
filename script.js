@@ -49,7 +49,7 @@ $("document").ready(() => {
             $(j).css("opacity", "90%")
                 .css("transition", "0.3s")
                 .css("background", `hsl(${r}, 40%, 60%)`)
-                .css("box-shadow", `0 0 1px 1px hsl(${r}, 40%, 60%)`);
+                .css("box-shadow", `0 0 20px 8px hsl(${r}, 40%, 60%)`);
         }
 
         $(j).hover(hoverSquare, animateSquare);
