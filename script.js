@@ -1,5 +1,5 @@
 
-let GRID_SQUARE_SIZE = 70;
+let GRID_SQUARE_SIZE = 80;
 const MAX_GRID_DIMENSIONS = 14;
 let width = $("#intro").width();
 let height = $("#intro").height();
@@ -23,6 +23,8 @@ $("document").ready(() => {
             });
         });
     });
+
+    let clicked = false;
 
     $(".gridSquare").each(function(i, j) {
         function animateSquare() {
@@ -50,6 +52,14 @@ $("document").ready(() => {
                 .css("transition", "0.3s")
                 .css("background", `hsl(${r}, 40%, 60%)`)
                 .css("box-shadow", `0 0 20px 8px hsl(${r}, 40%, 60%)`);
+            $(j).mousedown(() => {
+                $(":root").css("--col4", `hsl(${r}, 100%, 30%)`)
+                          .css("--col5", `hsl(${r}, 100%, 40%)`);
+                $(j).css("filter", "hue-rotate(180deg)");
+            })
+            $(j).mouseup(() => {
+                $(j).css("filter", "none");
+            })
         }
 
         $(j).hover(hoverSquare, animateSquare);
