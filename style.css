@@ -2,11 +2,11 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300&display=swap'); */
 
 :root {
-    --col1: #222831;
-    --col2: #393e46;
-    --col3: #ffffffdd;
-    --col4: #009199;
-    --col5: #00b3bd;
+    --col1: hsl(216, 18%, 16%);
+    --col2: hsl(217, 10%, 25%);
+    --col3: hsl(0, 0%, 100%);
+    --col4: hsl(183, 100%, 30%);
+    --col5: hsl(183, 100%, 40%);
 }
 
 * {
@@ -66,7 +66,8 @@ header {
     box-shadow: 5px 0px 5px rgb(0,0,0,0.2);
     z-index: 0;
     overflow-x: hidden;
-    border: 3px solid var(--col5);
+    border-left: 3px solid var(--col5);
+    border-right: 3px solid var(--col5);
     transition: 0.5s;
 }
 
@@ -209,12 +210,8 @@ main {
     opacity: 25%;
     background: var(--col5);
     transform: scale(1.05);
+    filter: none;
 }
-
-.gridSquare:active {
-    filter: hue-rotate(180deg);
-}
-
 
 #introJames {
     pointer-events: none;
@@ -370,6 +367,7 @@ h2 {
 
 .skill i {
     color: var(--col5);
+    width: 20px;
 }
 
 p {
@@ -528,7 +526,6 @@ p {
         right: -200px;
         transition: 0.15s;
         padding-top: 2em;
-        opacity: 80%;
     }
 
     #headerBottom {
@@ -578,4 +575,8 @@ p {
         max-width: 90vw;
         min-width: 90vw;
     }
+}
+
+a {
+    color: green;
 }
