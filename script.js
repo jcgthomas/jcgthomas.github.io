@@ -24,8 +24,6 @@ $("document").ready(() => {
         });
     });
 
-    let clicked = false;
-
     $(".gridSquare").each(function(i, j) {
         function animateSquare() {
             let k = Math.floor(Math.random()*100);
