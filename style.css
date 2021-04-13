@@ -5,8 +5,8 @@
     --col1: hsl(216, 18%, 16%);
     --col2: hsl(217, 10%, 25%);
     --col3: hsl(0, 0%, 100%);
-    --col4: hsl(183, 100%, 30%);
-    --col5: hsl(183, 100%, 40%);
+    --col4: hsl(183, 70%, 30%);
+    --col5: hsl(183, 70%, 40%);
 }
 
 * {
@@ -52,7 +52,7 @@ body {
 }
 
 header {
-    width: 8rem;
+    width: 7rem;
     background: var(--col4);
     height: 100vh;
     position: fixed;
@@ -143,7 +143,7 @@ header {
 }
 
 main {
-    padding-left: 8rem;
+    padding-left: 7rem;
     color:var(--col3);
 }
 
@@ -208,9 +208,10 @@ main {
 
 .gridSquare {
     opacity: 25%;
-    background: var(--col5);
-    transform: scale(1.05);
+    transform: scale(0.95);
     filter: none;
+    background: var(--col1);
+    transition: 0.1s;
 }
 
 #introJames {
