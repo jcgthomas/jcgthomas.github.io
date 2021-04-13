@@ -1,6 +1,6 @@
 
-let GRID_SQUARE_SIZE = 80;
-const MAX_GRID_DIMENSIONS = 14;
+let GRID_SQUARE_SIZE = 100;
+let MAX_GRID_DIMENSIONS = 12;
 let width = $("#intro").width();
 let height = $("#intro").height();
 if (width/10 > GRID_SQUARE_SIZE || height/10 > GRID_SQUARE_SIZE) {
@@ -25,7 +25,7 @@ $("document").ready(() => {
     });
 
     $(".gridSquare").each(function(i, j) {
-        function animateSquare() {
+        let animateSquare = function() {
             let k = Math.floor(Math.random()*100);
             let l = Math.floor(Math.random()*100);
             if (l < 80) {
@@ -36,11 +36,11 @@ $("document").ready(() => {
             let o = Math.floor(Math.random()*100);
             let p = Math.floor(Math.random()*100);
             $(j).css("opacity", `${(l-50)/1.5}%`)
-                .css("transition", `${((l-100)/-20)+1}s`)
+                .css("transition", `${((l-100)/-10)+1}s`)
                 .css("background", `hsl(0, 0%, ${l}%)`)
                 .css("transform", `translate(${(m/100)-0.5}vw, ${(n/100)-0.5}vh)
-                                   rotate(${(o/20)-2.5}deg)
-                                   scale(${(p/500)+0.85}, ${(p/500)+0.85})`)
+                                   rotate(${(o/40)-1.25}deg)
+                                   scale(${(p/1000)+0.9}, ${(p/1000)+0.9})`)
                 .css("box-shadow", `0 0 3px 3px hsl(0, 0%, ${l}%)`);
         }
 
@@ -51,8 +51,8 @@ $("document").ready(() => {
                 .css("background", `hsl(${r}, 40%, 60%)`)
                 .css("box-shadow", `0 0 20px 8px hsl(${r}, 40%, 60%)`);
             $(j).mousedown(() => {
-                $(":root").css("--col4", `hsl(${r}, 100%, 30%)`)
-                          .css("--col5", `hsl(${r}, 100%, 40%)`);
+                $(":root").css("--col4", `hsl(${r}, 70%, 30%)`)
+                          .css("--col5", `hsl(${r}, 70%, 40%)`);
                 $(j).css("filter", "hue-rotate(180deg)");
             })
             $(j).mouseup(() => {
@@ -60,10 +60,11 @@ $("document").ready(() => {
             })
         }
 
+        let index = $(j).index();
+        setTimeout(animateSquare, index*70);
+
         $(j).hover(hoverSquare, animateSquare);
         
         setInterval(animateSquare, Math.floor(Math.random()*100)*500+4000);
-
-        animateSquare();
     })
 });
