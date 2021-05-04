@@ -5,8 +5,8 @@
     --col1: hsl(216, 18%, 16%);
     --col2: hsl(217, 10%, 25%);
     --col3: hsl(0, 0%, 100%);
-    --col4: hsl(183, 70%, 30%);
-    --col5: hsl(183, 70%, 40%);
+    --col4: hsl(200, 70%, 30%);
+    --col5: hsl(200, 70%, 40%);
 }
 
 * {
@@ -272,14 +272,13 @@ h2 {
 }
 
 .portfolioItem {
-    opacity: 80%;
+    position: relative;
     transition: 0.2s;
     text-decoration: none;
     display: flex;
     justify-content: center;
     background: var(--col2);
     border: 5px solid var(--col5);
-    filter:saturate(50%);
 }
 
 .portfolioItem:before {
@@ -291,39 +290,43 @@ h2 {
 }
 
 #item1 {
-    background: url("./Snap\ Thumbnail.jpg") center;
+    background: url("/images/snap.jpg") center;
     background-size: cover;
 }
 
 #item2 {
-    background: url("./Memory\ Thumbnail.jpg") center;
+    background: url("/images/memory.jpg") center;
     background-size: cover;
 }
 
 .portfolioItem:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transform-origin: 50% 50%;
     opacity: 100%;
     background: var(--col3);
     color: white;
     filter: none;
+    filter:saturate(50%);
 }
 
 .viewProject {
-    display: none;
+    position: absolute;
+    visibility: hidden;
     opacity: 0%;
-    transition: 1s;
+    transition: 0.4s;
+    bottom: 10px;
 }
 
 .portfolioItem:hover .viewProject {
-    display: block;
+    visibility: visible;
     opacity: 100%;
+    transform: translateY(-10px);
 }
 
 .projectLink {
     font-size: 0.8rem;
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     border: none;
     padding: 0.5rem;
@@ -332,7 +335,7 @@ h2 {
 
 .projectLink:hover {
     background: var(--col4);
-    cursor: pointer;
+    cursor: pointer;;
 }
 
 .projectLink:active {
