@@ -278,7 +278,14 @@ h2 {
     display: flex;
     justify-content: center;
     background: var(--col2);
-    border: 5px solid var(--col5);
+    border: 3px solid var(--col5);
+    overflow: hidden;
+}
+
+.portfolioImage {
+    height: 100%;
+    width: 100%;
+    transition: 250ms;
 }
 
 .portfolioItem:before {
@@ -289,31 +296,26 @@ h2 {
     padding-bottom: 100%;
 }
 
-#item1 {
-    background: url("/images/snap.jpg") center;
-    background-size: cover;
+.portfolioItem:hover img {
+    filter: blur(3px) brightness(60%);
 }
 
-#item2 {
-    background: url("/images/memory.jpg") center;
-    background-size: cover;
-}
-
-.portfolioItem:hover {
-    transform: scale(1.02);
-    transform-origin: 50% 50%;
-    opacity: 100%;
-    background: var(--col3);
-    color: white;
-    filter: none;
-    filter:saturate(50%);
+.projectInfo {
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+    visibility: hidden;
+    opacity: 0%;
+    transition: 0.3s;
+    margin: 10px;
+    transform: translateY(-5px);
 }
 
 .viewProject {
     position: absolute;
     visibility: hidden;
     opacity: 0%;
-    transition: 0.4s;
+    transition: 0.3s;
     bottom: 10px;
 }
 
@@ -321,6 +323,12 @@ h2 {
     visibility: visible;
     opacity: 100%;
     transform: translateY(-10px);
+}
+
+.portfolioItem:hover .projectInfo {
+    visibility: visible;
+    opacity: 100%;
+    transform: translateY(5px);
 }
 
 .projectLink {
