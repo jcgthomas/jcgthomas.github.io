@@ -1,6 +1,6 @@
 
-let GRID_SQUARE_SIZE = 100;
-let MAX_GRID_DIMENSIONS = 12;
+let GRID_SQUARE_SIZE = 120;
+let MAX_GRID_DIMENSIONS = 10;
 let width = $("#intro").width();
 let height = $("#intro").height();
 if (width/10 > GRID_SQUARE_SIZE || height/10 > GRID_SQUARE_SIZE) {

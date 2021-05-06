@@ -283,9 +283,11 @@ h2 {
 }
 
 .portfolioImage {
+    position: absolute;
     height: 100%;
     width: 100%;
     transition: 250ms;
+    object-fit: cover;
 }
 
 .portfolioItem:before {
@@ -309,6 +311,7 @@ h2 {
     transition: 0.3s;
     margin: 10px;
     transform: translateY(-5px);
+    line-height: 1.5rem;
 }
 
 .viewProject {
