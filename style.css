@@ -208,8 +208,7 @@ main {
 
 .gridSquare {
     opacity: 25%;
-    transform: scale(0.95);
-    filter: none;
+    transform: scale(0.01);
     background: var(--col1);
     transition: 0.1s;
 }
@@ -225,13 +224,12 @@ main {
 .introText {
     transition: 0.3s;
     text-shadow: 2px 2px 10px rgba(0,0,0,1);
-    font-size: 3em;
+    font-size: 2em;
     opacity: 95%;
-    font-size: 3em;
 }
 
 #james {
-    font-size: 4em;
+    font-size: 3em;
 }
 
 
@@ -250,52 +248,29 @@ h2 {
 }
 
 #portfolioWindow {
-    display: grid;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
     justify-content: center;
-    padding: 0 2vw;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    grid-template-rows: 1fr;
-    grid-gap: 0.3em;
-}
-
-@media (max-width: 950px) {
-    #portfolioWindow {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 460px) {
-    #portfolioWindow {
-        grid-template-columns: 1fr;
-    }
 }
 
 .portfolioItem {
-    position: relative;
-    transition: 0.2s;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    background: var(--col2);
     border: 3px solid var(--col5);
     overflow: hidden;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolioImage {
-    position: absolute;
-    height: 100%;
-    width: 100%;
     transition: 250ms;
     object-fit: cover;
-}
-
-.portfolioItem:before {
-    content: "";
-    display: block;
-    height: 0;
-    width: 0;
-    padding-bottom: 100%;
+    position: absolute;
+    height: 100%;
 }
 
 .portfolioItem:hover img {
@@ -304,14 +279,14 @@ h2 {
 
 .projectInfo {
     position: absolute;
-    top: 0;
     font-size: 1rem;
     visibility: hidden;
     opacity: 0%;
     transition: 0.3s;
-    margin: 10px;
     transform: translateY(-5px);
     line-height: 1.5rem;
+    top: 10px;
+    margin: 5px;
 }
 
 .viewProject {
@@ -319,7 +294,7 @@ h2 {
     visibility: hidden;
     opacity: 0%;
     transition: 0.3s;
-    bottom: 10px;
+    bottom: 0;
 }
 
 .portfolioItem:hover .viewProject {
@@ -542,11 +517,10 @@ p {
         transition: 0.15s;
         padding-top: 2em;
     }
-
+/* 
     #headerBottom {
-        margin-bottom: 15vh;
         border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-    }
+    } */
 
     #burger input:checked ~ header {
         transform: translateX(-200px);
@@ -571,7 +545,7 @@ p {
     .introText {
         transition: 0.3s;
         text-shadow: 5px 5px 5px rgba(0,0,0,1);
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     
     #james {

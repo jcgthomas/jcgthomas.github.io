@@ -61,7 +61,7 @@ $("document").ready(() => {
         }
 
         let index = $(j).index();
-        setTimeout(animateSquare, index*70);
+        setTimeout(animateSquare, index*120);
 
         $(j).hover(hoverSquare, animateSquare);
         
