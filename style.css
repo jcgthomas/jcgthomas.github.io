@@ -271,7 +271,8 @@ h2 {
     transition: 250ms;
     object-fit: cover;
     position: absolute;
-    width: 100%;
+    width: 260px;
+    height: 260px;
 }
 
 .portfolioItem:hover img {
