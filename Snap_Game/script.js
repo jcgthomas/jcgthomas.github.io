@@ -221,7 +221,7 @@ let newRound = function() {
             let btnNo = document.getElementById("no");
             //New game options after victory is achieved.
             btnYes.addEventListener("click", () => {
-                window.location = "./Snap_Game/index.html";
+                window.location = "/Snap_Game/index.html";
             })
             btnNo.addEventListener("click", () => {
                 popup.style.setProperty("visibility", "hidden");
