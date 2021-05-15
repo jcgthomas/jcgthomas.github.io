@@ -250,17 +250,17 @@ h2 {
 #portfolioWindow {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 20px auto;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
 .portfolioItem {
     border: 3px solid var(--col5);
     overflow: hidden;
     margin: 20px;
-    width: 260px;
-    height: 260px;
+    width: 250px;
+    height: 250px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -271,12 +271,11 @@ h2 {
     transition: 250ms;
     object-fit: cover;
     position: absolute;
-    width: 260px;
-    height: 260px;
+    height: 100%;
 }
 
 .portfolioItem:hover img {
-    filter: blur(3px) brightness(60%);
+    opacity: 20%;
 }
 
 .projectInfo {
@@ -518,6 +517,12 @@ p {
         right: -200px;
         transition: 0.15s;
         padding-top: 2em;
+        justify-content: flex-start;
+    }
+
+    #headerBottom {
+        border-top: none;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     }
 /* 
     #headerBottom {
@@ -541,7 +546,6 @@ p {
     
     #introJames {
         padding-top: 40vh;
-    
     }
     
     .introText {
