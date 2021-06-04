@@ -350,7 +350,7 @@ h2 {
 
 .portfolio-item {
 	height: 300px;
-	max-width: 800px;
+	max-width: 700px;
 	min-width: 300px;
 	background: hsla(0, 0, 20, 0.5);
 	margin: 4rem 1rem;
@@ -375,7 +375,7 @@ h2 {
 	@media screen and (max-width: 700px) {
 		height: 40vw;
 		margin: 4rem 0;
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 	}
 
 	@media screen and (max-width: 460px) {
@@ -399,10 +399,19 @@ h2 {
 	justify-content: space-between;
 	align-items: center;
 
+	p {
+		flex-grow: 2;
+	}
+
 	@media screen and (max-width: 460px) {
 		padding: 0.4rem;
 		overflow: scroll;
 	}
+}
+
+.techs {
+	font-style: italic;
+	margin-bottom: 0.4rem;
 }
 
 .portfolio-links {
@@ -505,7 +514,6 @@ h2 {
 #contact {
 	background: hsla(0, 0, 7, 1);
 	padding: 3rem 0 1rem 0;
-	min-height: 100vh;
 }
 
 #contact-form {

@@ -478,7 +478,7 @@ h2 {
 
 .portfolio-item {
   height: 300px;
-  max-width: 800px;
+  max-width: 700px;
   min-width: 300px;
   background: rgba(51, 51, 51, 0.5);
   margin: 4rem 1rem;
@@ -515,7 +515,7 @@ h2 {
   .portfolio-item {
     height: 40vw;
     margin: 4rem 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -549,11 +549,22 @@ h2 {
           align-items: center;
 }
 
+.portfolio-info p {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
 @media screen and (max-width: 460px) {
   .portfolio-info {
     padding: 0.4rem;
     overflow: scroll;
   }
+}
+
+.techs {
+  font-style: italic;
+  margin-bottom: 0.4rem;
 }
 
 .portfolio-links {
@@ -670,7 +681,6 @@ h2 {
 #contact {
   background: #121212;
   padding: 3rem 0 1rem 0;
-  min-height: 100vh;
 }
 
 #contact-form {
