@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Snap</title>
+</head>
+<body>
+    <div id="topBar">
+        <div id="instructions">
+            <div id="leftInstructions">Left controls:<br>
+                LEFT SHIFT to place card<br>
+                LEFT CTRL to call SNAP!
+            </div>
+            <div id="rightInstructions">Right controls:<br>
+                RIGHT SHIFT to place card<br>
+                RIGHT CTRL to call SNAP!
+            </div>
+        </div>
+        <div id="cardArea">
+        </div>
+    </div>
+    <div id="playerArea">
+        <div class="player" id="playerLeft">
+            <div class="cardCount" id="leftCount"></div>
+            <div class="cardStack" id="leftCards">
+            </div>
+        </div>
+        <div class="player" id="playerRight">
+            <div class="cardCount" id="rightCount"></div>
+            <div class="cardStack" id="rightCards">
+            </div>
+        </div>
+    </div>
+    <div class="popup">
+        <span class="popuptext" id="myPopup">
+            <div id="buttons">
+                <button id="yes">Yes</button>
+                <button id="no">No</button>
+            </div>
+        </span>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
