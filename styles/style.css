@@ -4,7 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  --animation-time: 4s;
+  --animation-time: 0s;
 }
 
 body {
